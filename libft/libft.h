@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment <hpcavalcante@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/07 04:28:01 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/09 16:45:26 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/09 16:37:37 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/09 16:44:57 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-void ft_bzero(void *str, size_t n)
-{
-	while (n-- > 0)
-		*(unsigned char *)str++ = 0;
-}
 
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int main( void )
-  {
-    char buffer[80] = "They dont make time for me but is ok";
+# include <stdlib.h>
+# include <string.h>
 
-    ft_bzero(buffer, 5 );
-    return EXIT_SUCCESS;
-  }
+#endif
