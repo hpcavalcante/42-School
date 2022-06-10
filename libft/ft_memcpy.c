@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment <hpcavalcante@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 14:01:51 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/10 14:16:27 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/10 14:24:42 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/10 15:50:12 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void  ft_bzero (void *str, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	ft_memset(str, '\0', n);
+    char *cdest;
+    const char *csrc;
+
+    cdest = (char *) dest;
+    csrc = (const char *) src;
+    
+    while (n > 0)
+    {
+        *cdest = *csrc;
+        cdest++;
+        csrc++;
+        n--;
+    }
+    return (dest);
 }
