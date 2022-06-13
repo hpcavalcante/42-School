@@ -3,35 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment <hpcavalcante@gmail.com>          +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:14:18 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/10 15:16:29 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/12 22:51:14 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-// void *ft_memmove(void *dest, const void *src, size_t n)
-// {
+#include "libft.h"
 
-// }
-
-#include <stdio.h>
-#include <string.h>
-  
-int main()
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    char str1[] = "Geeks"; // Array of size 100
-    char str2[] = "Quiz"; // Array of size 5
-  
-    puts("str1 before memmove ");
-    puts(str1);
-  
-    /* Copies contents of str2 to sr1 */
-    memmove(str1, str2, sizeof(str2));
-  
-    puts("\nstr1 after memmove ");
-    puts(str1);
-  
-    return 0;
+    unsigned char   *cdest;
+    const unsigned char *csrc;
+
+    cdest = (unsigned char *) dest;
+    csrc = (const unsigned char *) src;
+
+    if (cdest > csrc)
+    {
+        while (n--)
+        {
+            cdest[n] = csrc[n];
+        }
+    }
+    else
+    {
+        ft_memcpy(cdest,csrc,n);
+    }
+    return ((void *)cdest);
 }
