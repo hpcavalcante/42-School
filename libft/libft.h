@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment <hepiment@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:37:37 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/12 22:57:03 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/14 15:59:25 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,21 @@ int ft_isascii(int c);
 int ft_isdigit(int c);
 int ft_isprint(int c);
 char    *ft_strchr(const char *str, int c);
-char ft_strlen(char *c);
+char ft_strlen(const char *c);
 int ft_tolower(int c);
 int ft_toupper(int c);
 void ft_bzero(void *str, size_t n);
 void    *ft_memset(void *str, int c, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
+size_t  ft_strlcpy(char *dst, const char *src, size_t d_size);
+size_t  ft_strlcat(char *dest, const char *src, size_t size);
+char *ft_strrchr(const char *str, int c);
+int ft_strncmp(const char *str1, const char *str2, size_t n);
+void *ft_memchr(const void *str, int c, size_t n);
+int ft_memcmp(const void *str1, const void *str2, size_t n);
+char	*ft_strnstr(const char *str, const char *find, size_t len);
+int	ft_atoi(const char *str);
 
 
 #endif

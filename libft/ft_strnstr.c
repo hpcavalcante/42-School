@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 21:57:22 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/14 08:58:03 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/14 15:56:16 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/14 15:57:16 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char ft_strlen(const char *c)
+char	*ft_strnstr(const char *str, const char *find, size_t len)
 {
-    int i;
+	size_t	count_size;
 
-    i = 0;
-    while (c[i] != '\0')
-    {
-        i++;
-    }
-    return (i); 
+	count_size = ft_strlen(find);
+	if (count_size == 0)
+		return ((char *)str);
+	while (*str != 0 && count_size <= len)
+	{
+		if (ft_strncmp(str, find, count_size) == 0)
+			return ((char *)str);
+		len--;
+		str++;
+	}
+	return (0);
 }
