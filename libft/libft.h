@@ -6,7 +6,7 @@
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:37:37 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/14 15:59:25 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/15 10:01:37 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void *ft_memchr(const void *str, int c, size_t n);
 int ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 int	ft_atoi(const char *str);
+void    *ft_calloc(size_t nb, size_t size);
+char    *ft_strdup(char *src);
 
 
 #endif
