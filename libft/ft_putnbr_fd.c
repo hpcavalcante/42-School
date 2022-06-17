@@ -1,28 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 09:36:04 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:02:14 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/17 18:21:41 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/17 18:22:06 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
+static void	ft_putchar_int(int i, int fd)
 {
-	size_t	m_sizes;
-	void	*receptor;
+	char	c;
 
-	if (number > 2147483647 || size > 2147483647)
-		return (NULL);
-	m_sizes = number * size;
-	receptor = malloc(m_sizes);
-	if (!receptor)
-		return (0);
-	ft_bzero(receptor, m_sizes);
-	return (receptor);
+	c = '0';
+	c = c + i;
+	write(fd, &c, 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int	i;
+
+	i = 1;
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2", fd);
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+	}
+	while (i <= n / 10)
+		i = i * 10;
+	while (i >= 1)
+	{
+		ft_putchar_int(n / i, fd);
+		n = n - (n / i) * i;
+		i = i / 10;
+	}
 }

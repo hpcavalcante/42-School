@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 09:36:04 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:02:14 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/17 18:19:14 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/17 18:19:36 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
-{
-	size_t	m_sizes;
-	void	*receptor;
+void	ft_putstr_fd(char *s, int fd)
+{	
+	int	count_size;
 
-	if (number > 2147483647 || size > 2147483647)
-		return (NULL);
-	m_sizes = number * size;
-	receptor = malloc(m_sizes);
-	if (!receptor)
-		return (0);
-	ft_bzero(receptor, m_sizes);
-	return (receptor);
+	count_size = 0;
+	while (s[count_size] != '\0')
+	{
+		write (fd, &s[count_size], 1);
+		count_size++;
+	}
 }

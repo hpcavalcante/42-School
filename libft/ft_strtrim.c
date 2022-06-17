@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 09:36:04 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:02:14 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/15 20:30:55 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/15 23:06:51 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	m_sizes;
-	void	*receptor;
+	size_t	str_size;
 
-	if (number > 2147483647 || size > 2147483647)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	m_sizes = number * size;
-	receptor = malloc(m_sizes);
-	if (!receptor)
-		return (0);
-	ft_bzero(receptor, m_sizes);
-	return (receptor);
+	while (*s1 && ft_strchr(set, *s1) != NULL)
+		s1++;
+	str_size = ft_strlen(s1);
+	while (str_size && ft_strchr(set, s1[str_size]))
+		str_size--;
+	return (ft_strnstr((char *)s1, 0, str_size + 1));
 }

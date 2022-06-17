@@ -6,7 +6,7 @@
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:37:37 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/15 10:01:37 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/17 18:26:25 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <string.h>
 
 int ft_isalnum(int c);
@@ -23,7 +25,7 @@ int ft_isascii(int c);
 int ft_isdigit(int c);
 int ft_isprint(int c);
 char    *ft_strchr(const char *str, int c);
-char ft_strlen(const char *c);
+int	ft_strlen(const char *str);
 int ft_tolower(int c);
 int ft_toupper(int c);
 void ft_bzero(void *str, size_t n);
@@ -38,8 +40,20 @@ void *ft_memchr(const void *str, int c, size_t n);
 int ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 int	ft_atoi(const char *str);
-void    *ft_calloc(size_t nb, size_t size);
+void	*ft_calloc(size_t number, size_t size);
 char    *ft_strdup(char *src);
+char    *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
+char *ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int,
+char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
 
 
 #endif

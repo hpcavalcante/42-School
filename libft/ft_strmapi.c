@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 09:36:04 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:02:14 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/17 18:12:41 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/17 18:12:44 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	m_sizes;
-	void	*receptor;
+	char	*str;
+	size_t	count_size;
 
-	if (number > 2147483647 || size > 2147483647)
-		return (NULL);
-	m_sizes = number * size;
-	receptor = malloc(m_sizes);
-	if (!receptor)
+	str = ft_strdup((char *)s);
+	if (!s || !f || !str)
 		return (0);
-	ft_bzero(receptor, m_sizes);
-	return (receptor);
+	count_size = 0;
+	while (str[count_size])
+	{
+		str[count_size] = f(count_size, str[count_size]);
+		count_size++;
+	}
+	return (str);
 }
