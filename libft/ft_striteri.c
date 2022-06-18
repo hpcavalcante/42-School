@@ -6,13 +6,13 @@
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 18:15:24 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:16:09 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/18 16:37:35 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int,
+void	ft_striteri(char *s, void (*f)(unsigned int,
 char*))
 {
 	size_t	count_size;

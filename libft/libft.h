@@ -6,7 +6,7 @@
 /*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:37:37 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/17 18:26:25 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/17 21:38:11 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 
 

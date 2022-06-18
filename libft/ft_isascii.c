@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment <hpcavalcante@student.42sp.org    +#+  +:+       +#+        */
+/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 21:37:14 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/01 21:48:02 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/18 16:09:42 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if ((c <= 127) && (c >= 0))
-    {
-        return (1);
-    }
-    else
-        return (0);
+	if ((c <= 127) && (c >= 0))
+	{
+		return (1);
+	}
+	else
+		return (0);
 }

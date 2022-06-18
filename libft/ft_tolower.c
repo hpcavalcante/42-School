@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment <hpcavalcante@student.42sp.org    +#+  +:+       +#+        */
+/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:32:58 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/02 13:36:38 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/18 16:45:12 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        c = c + 32;
-        return(c);
-    }
-    else
-        return (c);
-    
+	if (c >= 'A' && c <= 'Z')
+	{
+		c = c + 32;
+		return (c);
+	}
+	else
+		return (c);
 }
