@@ -6,17 +6,14 @@
 #    By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/01 18:27:12 by hepiment          #+#    #+#              #
-#    Updated: 2022/06/18 23:40:30 by hepiment         ###   ########.fr        #
+#    Updated: 2022/06/17 21:38:26 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Nome do arquivo compilado
 NAME = libft.a
 
-# Bibliotecas a serem usadas
 HEADER = ./libft.h
 
-# Arquivos das funções a serem usadas
 SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
 		ft_strchr.c ft_tolower.c ft_toupper.c ft_memcpy.c	\
@@ -28,16 +25,13 @@ SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_putnbr_fd.c ft_substr.c
 		 
 		
-# Flags de compilação
+
 CFLAGS = -Wall -Wextra -Werror
 
-# Compilador a ser usado
 CC = gcc
 
-# Transformar todos os arquivos .c de funções dos SRCS em objetos .o
 OBJS = ${SRCS:.c=.o}
 
-# Juntar todos os arquivos no executável do arquivo final, usando as flags de compilação e transformando todas as funções em objetos
 all:	$(NAME)
 
 $(NAME):	$(OBJS) $(BONUS_O)
@@ -45,12 +39,10 @@ $(NAME):	$(OBJS) $(BONUS_O)
 .c.o:
 			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-# Função usada com "make clean" que deleta todos os arquivos .o criados na compilação
 clean:
 
 	rm -f $(OBJS)
 
-# Função usada com "make fclean" que deleta todos os arquivos criados na compilação
 fclean: clean
 	rm -f $(NAME)
 
