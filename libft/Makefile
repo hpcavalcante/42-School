@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/01 18:27:12 by hepiment          #+#    #+#              #
-#    Updated: 2022/06/20 18:26:11 by hepiment         ###   ########.fr        #
+#    Updated: 2022/06/24 04:57:23 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,6 @@ $(NAME):	$(OBJS) $(BONUS_O)
 			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-
 	rm -f $(OBJS)
 
 fclean: clean
