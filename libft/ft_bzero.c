@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_bzero.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 14:01:51 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/15 10:03:30 by hepiment         ###   ########.fr       */
+/*   Created: 2022/06/24 04:45:58 by hepiment          #+#    #+#             */
+/*   Updated: 2022/06/24 18:48:15 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	ft_memset(str, 0, n);
+	unsigned char	*p;
+
+	p = str;
+	while (n > 0)
+	{
+		*p = 0;
+		p++;
+		n--;
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 18:21:41 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/19 21:18:05 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/25 00:36:47 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,11 @@ void	ft_putnbr_fd(int n, int fd)
 		i = i / 10;
 	}
 }
+
+/**
+ * @brief 
+ * 
+ * @param n 
+ * @return char 
+ */
+char funcao(int n);

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 09:41:19 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/20 04:43:17 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/26 23:31:15 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* Aloca uma nova string que começa com o index definido por start a partir da string apontada por s, essa nova string vai ter o tamanho máximo definido por len */
+/* Aloca uma nova string que começa com o index definido por start a partir da string apontada por s, 
+essa nova string vai ter o tamanho máximo definido por len */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	cat_len_s;

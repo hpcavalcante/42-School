@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 20:43:21 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/20 03:19:26 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/26 23:25:45 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	**ft_split(char const *s, char c)
 	while (s[index] != '\0')
 	{
 		while (s[index] == c)
-		index++;
+			index++;
 		posc = index;
 		while (s[index] != '\0' && s[index] != c)
 			index++;

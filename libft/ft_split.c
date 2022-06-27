@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hepiment < hepiment@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 20:43:21 by hepiment          #+#    #+#             */
-/*   Updated: 2022/06/20 03:19:02 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/06/27 18:54:15 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*ft_strncpy(char *dst, const char *src, size_t n)
 	return (dst);
 }
 
-static char	counterwords(const char *s, char c)
+static int	counterwords(const char *s, char c)
 {
 	int	index;
 	int	count;
